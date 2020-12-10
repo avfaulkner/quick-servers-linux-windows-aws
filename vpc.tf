@@ -5,7 +5,7 @@ resource "aws_vpc" "quick-server" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "quick-server"
+    Name = "{var.owner}-quick-server"
   }
 }
 

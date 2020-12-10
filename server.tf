@@ -19,7 +19,7 @@ resource "aws_instance" "quick-server" {
   ]
 
   tags = {
-    Name = var.instance_name
+    Name = "{var.owner}-{var.instance_name}"
   }
 
   root_block_device {
