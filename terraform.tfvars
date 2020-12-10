@@ -1,6 +1,6 @@
 owner         = "" # your name
 aws_account = "" # aws 12 digit account number without dashes
-region        = ""
+region        = "ca-central-1"
 aws_profile   = "" # add the file path to the aws credentials or leave blank and export them to the env
 instance_type = "t2.xlarge"
 root_vol_size = 64
@@ -18,5 +18,6 @@ public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAhrYbBc1Af8sP6ouPST/t5NV1o7
 
 # Add one of the following (priority is given to the ami variable):
 ami = "" #  base ami for your chosen region
-# See this link for quick-server AMIs for other regions: https://wiki.quick-server.org/Cloud/AWS
+
+# IMPORTANT: See this link for quick-server AMIs for other regions: https://wiki.quick-server.org/Cloud/AWS
 marketplace_ami_name = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
