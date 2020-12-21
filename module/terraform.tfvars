@@ -10,7 +10,7 @@ ssh_cidr_blocks = [
 ]
 # Place cidr blocks which have HTTPS access to web interface, if applicable"
 https_inbound_cidr_block = [
-  "0.0.0.0/0" # Place appropriate cidr blocks as a list of strings here
+  "" # Place appropriate cidr blocks as a list of strings here
 ]
 
 # Add the public ssh key material as a string:
