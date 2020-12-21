@@ -1,4 +1,4 @@
-module "quick-server-linux" {
+module "quick-server-windows" {
   source = "../module"
 
   ami = var.ami
