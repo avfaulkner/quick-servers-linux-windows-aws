@@ -8,9 +8,9 @@ instance_name = "quick-server"
 ssh_cidr_blocks = [
   "" # Place appropriate cidr blocks as a list of strings here
 ]
-# Place any additional (non-ssh) cidr blocks here
-quick-server_cidr_blocks = [
-  "" # Place appropriate cidr blocks as a list of strings here
+# Place cidr blocks which have HTTPS access to web interface, if applicable"
+https_inbound_cidr_block = [
+  "0.0.0.0/0" # Place appropriate cidr blocks as a list of strings here
 ]
 
 # Add the public ssh key material as a string:
@@ -21,3 +21,7 @@ ami = "" #  base ami for your chosen region
 
 # IMPORTANT: See this link for quick-server AMIs for other regions: https://wiki.quick-server.org/Cloud/AWS
 marketplace_ami_name = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+
+ssh_port = 22
+https_port = 443
+http_port = 80

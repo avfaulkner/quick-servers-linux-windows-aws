@@ -1,6 +1,6 @@
 owner         = "" # your name
 aws_account = "" # aws 12 digit account number without dashes
-region        = "ca-central-1"
+region        = "us-east-2"
 aws_profile   = "" # add the file path to the aws credentials or leave blank and export them to the env
 instance_type = "t2.xlarge"
 root_vol_size = 64
@@ -18,10 +18,10 @@ public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAhrYbBc1Af8sP6ouPST/t5NV1o7
 
 # Add one of the following (priority is given to the ami variable):
 # NOTE: if ami variable is not given, marketplace_ami_name will be used !!
-ami = "" #  base ami for your chosen region
+ami = "ami-0d5b55fd8cd8738f5" #  base ami for your chosen region
 
 # IMPORTANT: See this link for server AMIs for other regions: https://cloud-images.ubuntu.com/locator/ec2/
-marketplace_ami_name = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
+marketplace_ami_name = "Windows_Server-2019-English-Core-Base-*"
 
 ssh_port = 22
 https_port = 443

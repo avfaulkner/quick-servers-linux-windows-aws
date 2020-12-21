@@ -10,14 +10,30 @@ output "quick-server_instance" {
   }
 }
 
-//output "user_data_common" {
-//  value = "${data.template_file.user_data.rendered}"
-//}
-//
-//output "vpc" {
-//  value = aws_vpc.quick-server
-//}
-//
-//output "security_group" {
-//  value = aws_security_group.quick-server-sg
-//}
+output "ami" {
+  value = data.aws_ami.quick-server.id
+}
+
+output "iam_role_s3_access" {
+  value = aws_iam_role.role.id
+}
+
+output "instance_profile" {
+  value = aws_iam_instance_profile.quick-server_s3_access.id
+}
+
+output "iam_policy_s3_access" {
+  value = aws_iam_policy.ec2_policy.id
+}
+
+output "security_group" {
+  value = aws_security_group.quick-server-sg.id
+}
+
+output "key_pair" {
+  value = aws_key_pair.ssh-key.id
+}
+
+output "vpc" {
+  value = aws_vpc.quick-server.id
+}

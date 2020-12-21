@@ -1,6 +1,10 @@
 resource "aws_key_pair" "ssh-key" {
   key_name   = "quick-server-key"
   public_key = var.public_key
+
+  tags = {
+    "Name" = "{var.owner}-quick-server ssh key"
+  }
 }
 
 resource "aws_instance" "quick-server" {
@@ -33,7 +37,7 @@ resource "aws_eip" "quick-server-eip" {
   instance = aws_instance.quick-server.id
 
   tags = {
-    Name = "quick-server-eip"
+    Name = "{var.owner}quick-server-eip"
   }
 
 }

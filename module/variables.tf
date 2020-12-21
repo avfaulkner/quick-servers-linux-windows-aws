@@ -34,11 +34,6 @@ variable "ssh_cidr_blocks" {
   type        = list(string)
 }
 
-variable "quick-server_cidr_blocks" {
-  description = "Allows list members to send logs to quick-server server"
-  type        = list(string)
-}
-
 variable "aws_account" {
   description = "Canonical name of AWS account"
 }
@@ -49,4 +44,21 @@ variable "public_key" {
 
 variable "marketplace_ami_name" {
   description = "Name of AMI in AWS Marketplace"
+}
+
+variable "ssh_port" {
+  description = "SSH port into the server"
+}
+
+variable "https_port" {
+  description = "HTTPS inbound to the server"
+}
+
+variable "http_port" {
+  description = "HTTP inbound to the server"
+}
+
+variable "https_inbound_cidr_block" {
+  description = "Allows list members to have HTTPS access to web interface, if applicable"
+  type        = list(string)
 }

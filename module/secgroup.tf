@@ -13,22 +13,22 @@ resource "aws_security_group" "quick-server-sg" {
 resource "aws_security_group_rule" "ssh-in" {
   type        = "ingress"
   description = "ssh access"
-  from_port   = 22
-  to_port     = 22
+  from_port   = var.ssh_port
+  to_port     = var.ssh_port
   protocol    = "tcp"
   cidr_blocks = var.ssh_cidr_blocks
 
   security_group_id = aws_security_group.quick-server-sg.id
 }
 
-# quick-server inbound
+# https inbound
 resource "aws_security_group_rule" "quick-server-in" {
   type        = "ingress"
-  description = "quick-server access"
-  from_port   = 514
-  to_port     = 514
-  protocol    = "udp"
-  cidr_blocks = var.quick-server_cidr_blocks
+  description = "https access"
+  from_port   = var.https_port
+  to_port     = var.https_port
+  protocol    = "tcp"
+  cidr_blocks = var.https_inbound_cidr_block
 
   security_group_id = aws_security_group.quick-server-sg.id
 }
@@ -37,8 +37,8 @@ resource "aws_security_group_rule" "quick-server-in" {
 resource "aws_security_group_rule" "https-out" {
   type        = "egress"
   description = "https access"
-  from_port   = 443
-  to_port     = 443
+  from_port   = var.https_port
+  to_port     = var.https_port
   protocol    = "tcp"
   cidr_blocks = ["0.0.0.0/0"]
 
@@ -49,8 +49,8 @@ resource "aws_security_group_rule" "https-out" {
 resource "aws_security_group_rule" "http-out" {
   type        = "egress"
   description = "http access"
-  from_port   = 80
-  to_port     = 80
+  from_port   = var.http_port
+  to_port     = var.http_port
   protocol    = "tcp"
   cidr_blocks = ["0.0.0.0/0"]
 

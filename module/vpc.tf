@@ -18,7 +18,7 @@ resource "aws_route_table" "quick-server-rt" {
   }
 
   tags = {
-    Name = "rt-public"
+    Name = "{var.owner}-rt-public"
   }
 }
 
@@ -37,7 +37,7 @@ resource "aws_route_table" "quick-server-rt-private" {
   }
 
   tags = {
-    Name = "rt-private"
+    Name = "{var.owner}-rt-private"
   }
 }
 
@@ -50,7 +50,7 @@ resource "aws_subnet" "subnet-public" {
   availability_zone = "${var.region}a"
 
   tags = {
-    Name = "quick-server-public"
+    Name = "{var.owner}-subnet-public"
   }
 }
 
@@ -59,7 +59,7 @@ resource "aws_subnet" "subnet-private" {
   vpc_id     = aws_vpc.quick-server.id
 
   tags = {
-    Name = "quick-server-private"
+    Name = "{var.owner}-subnet-private"
   }
 }
 
@@ -69,7 +69,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.quick-server.id
 
   tags = {
-    Name = "quick-server-igw"
+    Name = "{var.owner}-quick-server-igw"
   }
 }
 
@@ -78,7 +78,7 @@ resource "aws_eip" "eip-nat" {
   vpc = true
 
   tags = {
-    Name = "quick-server-eip-nat"
+    Name = "{var.owner}-quick-server-eip-nat"
   }
 }
 
@@ -87,6 +87,6 @@ resource "aws_nat_gateway" "nat" {
   subnet_id     = aws_subnet.subnet-private.id
 
   tags = {
-    Name = "quick-server-nat-gw"
+    Name = "{var.owner}-quick-server-nat-gw"
   }
 }
