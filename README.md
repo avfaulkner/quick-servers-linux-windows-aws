@@ -16,7 +16,7 @@ This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic n
 
 1. Clone the repo onto your local workstation
 2. cd into quick-servers-linux-windows-aws/server-linux or quick-servers-linux-windows-aws/server-windows
-3. Add your desired variables to the server-linux/terraform.tfvars and server-windows files
+3. Add your desired variables to the server-linux/terraform.tfvars and server-windows/terraform.tfvars files
     - public_key: Add public key material (string starting with ssh-rsa...)
     - Instance AMI variables: 
         - ami: The AMI ID of the desired instance 
