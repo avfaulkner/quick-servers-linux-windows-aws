@@ -26,6 +26,11 @@ Add your desired variables to aws/terraform.tfvars file
     - Public subnet: Use if ssh'ing to the server from outside of the server's network.
     - Private subnet: Use if ssh'ing from within the server's network.  
     
+    
+1. Clone the repo onto your local workstation
+2. cd into quick-servers-linux-windows-aws/server-linux or quick-servers-linux-windows-aws/server-windows
+3. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure. 
+
 
 Initialize the environment
 
