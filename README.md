@@ -1,6 +1,6 @@
 # Quick Servers
 
-This stack builds quick Ubuntu 20.04 and Windows 10 servers and basic networking infrastructure for each.
+This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic networking infrastructure for each.
 
 ### Use case
 - Running tests requiring quick server configuration.
