@@ -13,8 +13,10 @@ This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic n
 - AWS Provider >= 2.0
 
 ## Usage
-Add your desired variables to aws/terraform.tfvars file
-- Instance key variable: 
+
+1. Clone the repo onto your local workstation
+2. cd into quick-servers-linux-windows-aws/server-linux or quick-servers-linux-windows-aws/server-windows
+3. Add your desired variables to the server-linux/terraform.tfvars and server-windows files
     - public_key: Add public key material (string starting with ssh-rsa...)
 - Instance AMI variables: 
     - ami: The AMI ID of the desired instance 
@@ -25,11 +27,7 @@ Add your desired variables to aws/terraform.tfvars file
 - Subnetting: 
     - Public subnet: Use if ssh'ing to the server from outside of the server's network.
     - Private subnet: Use if ssh'ing from within the server's network.  
-    
-    
-1. Clone the repo onto your local workstation
-2. cd into quick-servers-linux-windows-aws/server-linux or quick-servers-linux-windows-aws/server-windows
-3. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure. 
+4. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure. 
 
 
 Initialize the environment
