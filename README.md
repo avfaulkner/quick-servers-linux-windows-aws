@@ -18,15 +18,15 @@ This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic n
 2. cd into quick-servers-linux-windows-aws/server-linux or quick-servers-linux-windows-aws/server-windows
 3. Add your desired variables to the server-linux/terraform.tfvars and server-windows files
     - public_key: Add public key material (string starting with ssh-rsa...)
-- Instance AMI variables: 
-    - ami: The AMI ID of the desired instance 
-    - marketplace_ami_name: The name of an image in the AWS Marketplace.
-    Examples could be "ubuntu*", "centos*", etc. 
-    - Priority is given to the "ami" variable; if a specific AMI ID is provided, 
-    we will use that image. 
-- Subnetting: 
-    - Public subnet: Use if ssh'ing to the server from outside of the server's network.
-    - Private subnet: Use if ssh'ing from within the server's network.  
+    - Instance AMI variables: 
+        - ami: The AMI ID of the desired instance 
+        - marketplace_ami_name: The name of an image in the AWS Marketplace.
+        Examples could be "ubuntu*", "centos*", etc. 
+        - Priority is given to the "ami" variable; if a specific AMI ID is provided, 
+        we will use that image. 
+    - Subnetting: 
+        - Public subnet: Use if ssh'ing to the server from outside of the server's network.
+        - Private subnet: Use if ssh'ing from within the server's network.  
 4. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure. 
 
 
