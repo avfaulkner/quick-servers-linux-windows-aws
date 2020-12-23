@@ -30,6 +30,7 @@ This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic n
 4. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure. 
 
 
+
 Initialize the environment
 
 ```
