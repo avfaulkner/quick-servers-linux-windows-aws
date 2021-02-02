@@ -12,7 +12,7 @@ This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic n
 - Terraform >= 0.12.28
 - AWS Provider >= 2.0
 
-## Usage
+## Usage Instructions
 
 1. Clone the repo onto your local workstation
 2. cd into quick-servers-linux-windows-aws/server-linux or quick-servers-linux-windows-aws/server-windows
@@ -27,7 +27,8 @@ This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic n
     - Subnetting: 
         - Public subnet: Use if ssh'ing to the server from outside of the server's network.
         - Private subnet: Use if ssh'ing from within the server's network.  
-4. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure. 
+4. CD into either the server-linux or server-windows directory to build a linux or windows server. 
+5. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure.
 
 
 
